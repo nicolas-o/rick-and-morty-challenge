@@ -1,5 +1,5 @@
 // Esta función obtiene los datos de "character" y "episode" y muestra en la pantalla una tabla con la imagen, nombre y location(origen).
-async function episodesToTable(page = "0") {
+async function charactersToTable(page = "0") {
   //La información de la base de datos.
   let characters = await getData("character");
   let episodes = await getData("episode");
