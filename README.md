@@ -1,6 +1,7 @@
 # Rick and Morty Challenge
 
-Esta app obtiene datos de la API de https://rickandmortyapi.com/.
+&nbsp; Esta app obtiene datos de la API de https://rickandmortyapi.com/.
+&nbsp;
 Está dividia en dos partes: Char Counter y Episode Locations.
 Char Counter muestra cuantas veces existe una letra en los nombres de todos los`character`, `locations` y `episodes`.
 Episode Locations tiene un menú para seleccionar los episodios de la serie, cuando seleccionamos uno, muestra cuantos personajes hay y los despliega en una tabla con su imagen, nombre y Location(origen).
