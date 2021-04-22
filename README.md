@@ -30,7 +30,7 @@ Episode Locations tiene un menú para seleccionar los episodios de la serie, cua
 
 ### Objetivo del ejercicio
 
-El objetivo principal es consultar todos los `character`, `locations` y `episodes` de [https://rickandmortyapi.com/](https://rickandmortyapi.com/) e indicar:
+Tiene como objetivo consultar todos los `character`, `locations` y `episodes` de [https://rickandmortyapi.com/](https://rickandmortyapi.com/) e indicar:
 
 1. Char counter:
    - cuántas veces aparece la letra **"l"** (case insensitive) en los nombres de todos los `location`
