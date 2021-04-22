@@ -39,8 +39,6 @@ El objetivo principal es consultar todos los `character`, `locations` y `episode
    - para cada `episode`, indicar la cantidad y un listado con las `location` (`origin`) de todos los `character` que aparecieron en ese `episode` (sin repetir)
    - cuánto tardó el programa en total (desde inicio ejecución hasta entrega de resultados)
 
-**Hay muchos personajes que comparten el mismo nombre pero son personajes distintos**
-
 ## Autores ✒️
 
 - **Nicolás Orellana** https://github.com/nicolas-o
