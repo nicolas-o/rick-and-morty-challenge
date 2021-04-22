@@ -7,12 +7,6 @@ Episode Locations tiene un menú para seleccionar los episodios de la serie, cua
 
 **Demo:** https://rick-and-morty-challenge.netlify.app/
 
-<!-- &nbsp;
-
-![besale-test-screenshot](https://github.com/nicolas-o/ejercicio-bsale/blob/master/client/assets/bsaleTestScreenshot.png)
-
-&nbsp; -->
-
 ### Instalación
 
 - Clone, Fork o descarga este repositorio.
