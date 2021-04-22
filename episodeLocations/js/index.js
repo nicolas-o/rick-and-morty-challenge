@@ -2,7 +2,7 @@
 let episode = document.getElementById("episodes");
 
 // Aquí se ejecutan las funciones y se toma el tiempo en que tardó en ejecutarse.
-console.time("Timer");
+console.time("episodeLocations Timer");
 charactersToTable();
 listOfEpisodesToMenu();
 
@@ -14,4 +14,4 @@ episode.addEventListener(
   },
   false
 );
-console.timeEnd("Timer");
+console.timeEnd("episodeLocations Timer");
