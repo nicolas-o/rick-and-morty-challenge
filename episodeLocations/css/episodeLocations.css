@@ -1,0 +1,24 @@
+.EpisodeCounterContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding: 0 50px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid;
+}
+
+#characterTable {
+  width: 100%;
+  table-layout: fixed;
+  padding: 0 20px;
+}
+
+#characterTable th {
+  padding: 20px 0;
+}
+
+#characterTable img {
+  border-radius: 50%;
+  width: 50%;
+}
