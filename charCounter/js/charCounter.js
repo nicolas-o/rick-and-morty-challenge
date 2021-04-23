@@ -36,19 +36,7 @@ async function charCounter(source, char) {
     results.next !== null
   );
 
-  //Selecciona la sección con la clase .charCounter.
-  let charCounter = document.querySelector(".charCounter");
-
-  //Añade al HTML el nombre del caracter y cuantas veces aparece.
-  charCounter.innerHTML += `<h3>La letra "${char}" aparece ${totalcharCounter} veces en los nombres de ${source.toUpperCase()} </h3>`;
-
-  return totalcharCounter;
+  return Promise.resolve([char, totalcharCounter, source]);
 }
-
-console.time("charCounter Timer");
-charCounter("episode", "e");
-charCounter("location", "i");
-charCounter("character", "c");
-console.timeEnd("charCounter Timer");
 
 module.exports = charCounter;
