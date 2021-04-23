@@ -29,5 +29,7 @@ async function getData(source) {
     results.next !== null
   );
 
-  return items;
+  return Promise.resolve(items);
 }
+
+module.exports = getData;
