@@ -1,7 +1,8 @@
+//global.fetch sirve para traer window.fetch a node.js.
+global.fetch = require("node-fetch");
 const expect = require("chai").expect;
 const charCounter = require("../charCounter/js/charCounter");
-global.fetch = require("node-fetch");
-
+//Testea si charCounter retorna la letra, cantidad y recurso solicitado.
 describe("charCounter", () => {
   it("La letra e aparece 71 veces en los nombres de episode", async () => {
     const result = await charCounter("episode", "e");
