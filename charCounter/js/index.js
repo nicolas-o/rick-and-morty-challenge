@@ -1,7 +1,12 @@
+//Esta función recibe como parametro la función charCounter(source, character) para poder escribirlos en el DOM.
 async function writeInDOM(params) {
+  //Un array con la letra, número de veces en que aparece y el recurso de donde se obtiene.
   let CountCharacters = await params;
+  //La letra
   let character = CountCharacters[0];
+  //Número de veces en que aparece
   let Counter = CountCharacters[1];
+  //El recurso de donde se obtiene la información.
   let source = CountCharacters[2];
 
   // Selecciona la sección con la clase .charCounter.
