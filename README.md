@@ -24,7 +24,7 @@ Episode Locations tiene un menú para seleccionar los episodios de la serie, cua
 
 ## Testeado con
 
-- Jest
+- Mocha
 
 ## Proceso
 
