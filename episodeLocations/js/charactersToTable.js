@@ -13,10 +13,10 @@ async function charactersToTable(page = "0") {
   characterCounterContainer.innerHTML = `<h3>Este Episodio tiene ${episodes[page].characters.length} personajes</h3>
   `;
 
-  //Aquí se añaden los headings de la tabla. Los estoy creando aquí para que no se sobreescriba sobre ellos.
-
   //En characterTableHtml se añadirán los personajes.
   let characterTableHtml;
+
+  //Aquí se añaden los headings de la tabla. Los estoy creando aquí para que no se sobreescriba sobre ellos.
   characterTableHtml = "<tr>";
   characterTableHtml += "<th>Personaje</th>";
   characterTableHtml += "<th>Nombre</th>";
