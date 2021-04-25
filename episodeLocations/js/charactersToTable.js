@@ -4,6 +4,16 @@ async function charactersToTable(page = "0") {
   let characters = await getData("character");
   let episodes = await getData("episode");
 
+  //Elimina duplicados en characters.
+  const map = {};
+  const charactersWithNoDuplicates = [];
+  characters.forEach((el) => {
+    if (!map[JSON.stringify(el)]) {
+      map[JSON.stringify(el)] = true;
+      charactersWithNoDuplicates.push(el);
+    }
+  });
+
   //El div que sirve de contenedor con el id characterCounterContainer.
   let characterCounterContainer = document.getElementById(
     "characterCounterContainer"
@@ -24,8 +34,8 @@ async function charactersToTable(page = "0") {
   characterTableHtml += "</tr>";
 
   //Se mapea sobre los personajes y si su url coincide con la que están en los episodios se añaden respectivamente.
-  // character.url en characters y episodes[].characters son las propiedades que tienen valores que coinciden.
-  characters.map((character) => {
+  // character.url en charactersWithNoDuplicates y episodes[].characters son las propiedades que tienen valores que coinciden.
+  charactersWithNoDuplicates.map((character) => {
     //Si character.url de un personaje se encuentra en episodes.characters de un episodio este se añade a characterTableHtml para luego ser enviado al HTML.
     if (episodes[page].characters.includes(character.url)) {
       characterTableHtml += "<tr>";
