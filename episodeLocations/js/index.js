@@ -5,6 +5,7 @@ let episode = document.getElementById("episodes");
 console.time("episodeLocations Timer");
 charactersToTable();
 listOfEpisodesToMenu();
+console.timeEnd("episodeLocations Timer");
 
 //Aquí se ejecuta charactersToTable y se pasa el valor del episodio seleccionado para que se muestre en la pantalla.
 episode.addEventListener(
@@ -14,4 +15,3 @@ episode.addEventListener(
   },
   false
 );
-console.timeEnd("episodeLocations Timer");
