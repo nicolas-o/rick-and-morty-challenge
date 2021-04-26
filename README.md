@@ -13,7 +13,7 @@ Episode Locations tiene un menú para seleccionar los episodios de la serie, cua
 
 - Clone, Fork o descarga este repositorio.
 - Abre la carpeta raíz del proyecto en el terminal y ejecuta `npm install` para instalar las dependencias.
-- Abre `index.html` con Open Live Server.
+- Abre `index.html` con Live Server.
 
 ## Construido con
 
