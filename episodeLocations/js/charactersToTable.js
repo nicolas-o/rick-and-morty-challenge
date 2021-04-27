@@ -1,5 +1,7 @@
+import { getCharactersData } from "./getCharactersData.js";
+
 // Esta función obtiene los datos de "episode" y muestra en la pantalla una tabla con la imagen, nombre y location(origen) de los personajes.
-async function charactersToTable(episode = "1") {
+export async function charactersToTable(episode = "1") {
   //La información de la base de datos.
   let characters = await getCharactersData(episode);
 

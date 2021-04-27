@@ -1,3 +1,6 @@
+import { charactersToTable } from "./charactersToTable.js";
+import { listOfEpisodesToMenu } from "./listOfEpisodesToMenu.js";
+
 // Aquí se ejecutan las funciones y se toma el tiempo en que tardaron en ejecutarse.
 console.time("episodeLocations Timer");
 charactersToTable();

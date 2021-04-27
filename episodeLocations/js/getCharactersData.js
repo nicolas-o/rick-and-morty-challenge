@@ -1,5 +1,5 @@
 //Esta función obtiene todos los personajes de cada capítulo.
-async function getCharactersData(episode) {
+export async function getCharactersData(episode) {
   //get se utiliza dos veces por eso esta como una funición.
   const get = (url) => fetch(url).then((response) => response.json());
 
