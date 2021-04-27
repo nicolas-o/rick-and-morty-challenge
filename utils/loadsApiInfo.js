@@ -1,12 +1,15 @@
 //En esta función se obtiene el número de paginas que tiene cada recurso.
-async function loadsApiInfo(source) {
-  let info = [];
+export async function loadsApiInfo(source) {
   try {
     const response = await fetch(`https://rickandmortyapi.com/api/${source}`);
-    let data = await response.json();
-    info = data.info;
+    const data = await response.json();
+    const pages = data.info.pages;
+    const count = data.info.count;
+    return [pages, count];
   } catch (err) {
-    console.error(`Ha ocurrido un error ${err}`);
+    return null;
   }
-  return info;
 }
+
+if (typeof module !== "undefined" && typeof module.exports !== "undefined")
+  module.exports = loadsApiInfo;
