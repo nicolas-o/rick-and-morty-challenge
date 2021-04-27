@@ -24,7 +24,13 @@ Episode Locations tiene un menú para seleccionar los episodios de la serie, cua
 
 ## Testeado con
 
-- Mocha (se ejecuta con npm test)
+- Jest (se ejecuta con npm test)
+
+## Herramientas
+
+- Babel
+- node-fetch
+- regenerator-runtime
 
 ## Proceso
 
