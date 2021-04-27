@@ -1,6 +1,8 @@
+import { loadsDataFromPages } from "./loadsDataFromPages.js";
+
 //Esta función obtiene datos de la API "rickandmortyapi.com" y cuenta cuantas veces se repite un caracter en la propiedad "name".
 //Los parametros: source; La fuente de donde se saca la información, y char; El caracter que se ingresa para hacer el conteo.
-async function charCounter(source, char) {
+export async function charCounter(source, char) {
   //En totalcharCounter se lleva el conteo de las veces en que un caracter aparece.
   let totalcharCounter = 0;
 

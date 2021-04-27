@@ -1,3 +1,5 @@
+import { charCounter } from "./charCounter.js";
+
 //Esta función recibe como parametro la función charCounter(source, character) para poder escribirlos en el DOM.
 async function writeInDOM(params) {
   //Un array con la letra, número de veces en que aparece y el recurso de donde se obtiene.
