@@ -3,7 +3,10 @@ import { getCharactersData } from "./getCharactersData.js";
 // Esta función obtiene los datos de "episode" y muestra en la pantalla una tabla con la imagen, nombre y location(origen) de los personajes.
 export async function charactersToTable(episode = "1") {
   //La información de la base de datos.
+  const t0 = performance.now(); //Performance.now() sirve para calcular el tiempo de ejecución.
   let characters = await getCharactersData(episode);
+  const t1 = performance.now();
+  const timer = Math.round(t1 - t0);
 
   //Elimina duplicados en characters.
   const map = {};
@@ -23,6 +26,9 @@ export async function charactersToTable(episode = "1") {
   // Se añade texto al contenedor con la cantidad de personajes que este tiene.
   characterCounterContainer.innerHTML = `<h3>Este Episodio tiene ${characters.length} personajes</h3>
     `;
+
+  // Se añade texto al contenedor con el tiempo en que tardó en cargar los resultados.
+  characterCounterContainer.innerHTML += `<h3>(tiempo de ejecución: ${timer} ms)</h3>`;
 
   //En characterTableHtml se añadirán los personajes.
   let characterTableHtml;

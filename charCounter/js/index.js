@@ -3,7 +3,11 @@ import { charCounter } from "./charCounter.js";
 //Esta función recibe como parametro la función charCounter(source, character) para poder escribirlos en el DOM.
 async function writeInDOM(params) {
   //Un array con la letra, número de veces en que aparece y el recurso de donde se obtiene.
+  const t0 = performance.now(); //Performance.now() sirve para calcular el tiempo de ejecución.
   let CountCharacters = await params;
+  const t1 = performance.now();
+  const timer = Math.round(t1 - t0);
+
   //La letra
   let character = CountCharacters[0];
   //Número de veces en que aparece
@@ -15,15 +19,9 @@ async function writeInDOM(params) {
   let charCounterContainer = document.querySelector(".charCounter");
 
   // Añade al HTML el nombre del caracter y cuantas veces aparece.
-  charCounterContainer.innerHTML += `<h3>La letra "${character}" aparece ${Counter} veces en los nombres de ${source.toUpperCase()} </h3>`;
+  charCounterContainer.innerHTML += `<h3>La letra "${character}" aparece ${Counter} veces en los nombres de ${source.toUpperCase()} (tiempo de ejecución: ${timer} ms).</h3>`;
 }
 
-console.time('charCounter: letra "e" en episode');
 writeInDOM(charCounter("episode", "e"));
-console.timeEnd('charCounter: letra "e" en episode');
-console.time('charCounter: letra "i" en location');
 writeInDOM(charCounter("location", "i"));
-console.timeEnd('charCounter: letra "i" en location');
-console.time('charCounter: letra "c" en character');
 writeInDOM(charCounter("character", "c"));
-console.timeEnd('charCounter: letra "c" en character');
