@@ -18,8 +18,12 @@ async function writeInDOM(params) {
   charCounterContainer.innerHTML += `<h3>La letra "${character}" aparece ${Counter} veces en los nombres de ${source.toUpperCase()} </h3>`;
 }
 
-console.time("charCounter Timer");
+console.time('charCounter: letra "e" en episode');
 writeInDOM(charCounter("episode", "e"));
+console.timeEnd('charCounter: letra "e" en episode');
+console.time('charCounter: letra "i" en location');
 writeInDOM(charCounter("location", "i"));
+console.timeEnd('charCounter: letra "i" en location');
+console.time('charCounter: letra "c" en character');
 writeInDOM(charCounter("character", "c"));
-console.timeEnd("charCounter Timer");
+console.timeEnd('charCounter: letra "c" en character');
