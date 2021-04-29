@@ -1,4 +1,4 @@
-import { loadsApiInfo } from "../../utils/loadsApiInfo.js";
+import loadsApiInfo from "../../utils/loadsApiInfo.js";
 
 //Esta función carga toda la información de las páginas en de la API.
 //source es el recurso a donde se ingresa para obtener la información. "episode" para los episodios, "character" para los personajes y "location" para los lugares.
@@ -30,13 +30,3 @@ export async function loadsDataFromPages(source) {
 
   return data;
 }
-
-async function test() {
-  const data = await loadsDataFromPages("episode");
-  console.log(data[0].results[0].name);
-}
-
-test();
-
-if (typeof module !== "undefined" && typeof module.exports !== "undefined")
-  module.exports = loadsDataFromPages;
