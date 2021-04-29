@@ -6,14 +6,8 @@ export async function charCounter(source, char) {
   //En totalcharCounter se lleva el conteo de las veces en que un caracter aparece.
   let totalcharCounter = 0;
 
-  //En requests están almacenadas todas las peticiones HTTP, es decir, toda la data.
-  let requests = await loadsDataFromPages(source);
-
-  //En responses se itera sobre los HTTP requests, los resuelve y retorna una sola array con toda la información.
-  const responses = await Promise.all(requests);
-
   //En data ya se puede acceder a la información.
-  const data = await Promise.all(responses.map((res) => res.json()));
+  const data = await loadsDataFromPages(source);
 
   //Se itera sobre todos los resultados de los objetos que hay en data y cuenta las veces en que una letra se repite y añade el conteo a totalCharCounter.
   try {

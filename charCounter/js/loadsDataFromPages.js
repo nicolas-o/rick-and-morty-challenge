@@ -22,6 +22,21 @@ export async function loadsDataFromPages(source) {
   } catch (err) {
     console.error(`Ha ocurrido un error ${err}`);
   }
+  //En responses se itera sobre los HTTP requests, los resuelve y retorna una sola array con toda la información.
+  const responses = await Promise.all(requests);
 
-  return requests;
+  //En data ya se puede acceder a la información.
+  const data = await Promise.all(responses.map((res) => res.json()));
+
+  return data;
 }
+
+async function test() {
+  const data = await loadsDataFromPages("episode");
+  console.log(data[0].results[0].name);
+}
+
+test();
+
+if (typeof module !== "undefined" && typeof module.exports !== "undefined")
+  module.exports = loadsDataFromPages;
